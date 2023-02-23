@@ -47,6 +47,7 @@ public class WhatsappRepository {
         Group group=new Group(groupName, users.size());
         groupUserMap.put(group, users);
         adminMap.put(group, users.get(0));
+        groupMessageMap.put(group, new ArrayList<Message>());
         return group;
     }
     public int createMessage(String content) {
